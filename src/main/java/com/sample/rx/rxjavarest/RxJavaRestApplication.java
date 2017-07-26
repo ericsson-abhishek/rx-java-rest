@@ -2,6 +2,8 @@ package com.sample.rx.rxjavarest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 public class RxJavaRestApplication {
@@ -9,4 +11,16 @@ public class RxJavaRestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RxJavaRestApplication.class, args);
 	}
+}
+
+@RestController
+class SampleController
+{
+    @RequestMapping("/name")
+    public String getName()
+    {
+        System.out.println("getting all the input checks done");
+        return "Abhishek";
+    }
+    
 }
